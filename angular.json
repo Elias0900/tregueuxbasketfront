@@ -21,15 +21,25 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/favicon.ico",
+              "src/assets/css/img",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/components.css",
+              "src/assets/css/icons.css",
+              "src/assets/css/responsee.css",
+              "src/assets/css/template-style.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ],
+
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
