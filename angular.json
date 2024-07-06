@@ -22,7 +22,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets/css/img",
+              "src/assets",
+              "src/assets/js",
+
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -37,7 +39,10 @@
               "src/assets/css/template-style.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/jquery-1.8.3.min.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/modernizr.js"
             ],
 
             "server": "src/main.server.ts",
