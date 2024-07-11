@@ -200,7 +200,7 @@ td {border-right:1px solid #fff;}
 .primary-color-white .background-primary-hightlight .top-nav .active-item > a, .primary-color-white .background-primary-hightlight .top-nav li a:hover, .primary-color-white .background-primary-hightlight .aside-nav li a:hover,
 .primary-color-white .background-primary-hightlight .aside-nav > ul > li.active-item > a:link, .primary-color-white .background-primary-hightlight .aside-nav > ul > li.active-item > a:visited {
   background: #d59637 none repeat scroll 0 0;
-  color: #023300;
+  color: #41be3c;
 }
 
 .background-primary-hightlight .top-nav .active-item > a, .background-primary-hightlight .top-nav li a:hover, .background-primary-hightlight .aside-nav li a:hover,
@@ -407,7 +407,7 @@ aside {
   border-width: 0 0 0 5px;
   border-color: #e5e5e5;
   background: none;
-  color: #333;
+  color: #be1212;
 }
 .aside-nav li ul ul {
   background: #e9e9e9 none repeat scroll 0 0;
@@ -2191,10 +2191,6 @@ video {
   stroke-width: 2.5;
   stroke-dasharray: 196, 543;
   stroke-dashoffset: 437;
-}
-
-li.test-border:hover a{
-
 }
 
 .menu-container {
