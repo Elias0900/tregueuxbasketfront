@@ -32,8 +32,6 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/css/components.css",
               "src/assets/css/icons.css",
               "src/assets/css/responsee.css",
               "src/assets/css/template-style.css"
