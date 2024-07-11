@@ -199,8 +199,9 @@ nav {
   min-width:100%;
   padding:0.625rem;
 }
-.top-nav li a:hover, .aside-nav li a:hover {background:#2b4c61;}
+
 .top-nav li ul {display:none;}
+
 .top-nav li ul li,.top-nav li ul li ul li {
   float:none;
   list-style:none outside none;
