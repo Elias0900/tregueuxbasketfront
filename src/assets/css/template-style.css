@@ -3,6 +3,34 @@
 /* Typography */
 body {
   background: #fff;
+
+  /*background: linear-gradient(
+     to right,
+    rgb(12, 0, 15),
+    rgb(20, 8, 23),
+    rgb(26, 16, 29),
+    rgb(32, 21, 36),
+    rgb(38, 25, 42),
+    rgb(45, 29, 49),
+    rgb(52, 34, 56),
+    rgb(58, 38, 64),
+    rgb(65, 43, 71),
+    rgb(73, 47, 78),
+    rgb(80, 52, 86),
+    rgb(87, 57, 94),
+    rgb(95, 62, 101),
+    rgb(103, 66, 109),
+    rgb(111, 71, 117),
+    rgb(119, 76, 125),
+    rgb(127, 81, 133),
+    rgb(135, 86, 141),
+    rgb(143, 91, 149),
+    rgb(152, 96, 157),
+    rgb(161, 101, 165),
+    rgb(169, 107, 173),
+    rgb(178, 112, 182),
+    rgb(187, 117, 190)
+  );*/
 }
 
 
@@ -299,10 +327,7 @@ hr.break-small.break-center.break-double:before {
 hr.break.break-small.break-center.break-double:after {
   margin: 4px auto 35px;
 }
-hr.break-small.break-double.background-white:before, hr.break-small.break-double.background-white:after,
-.primary-color-white hr.break-small.break-double.background-primary:before, .primary-color-white hr.break-small.break-double.background-primary:after {
-  background: #fff;
-}
+
 hr.break-small.break-double.background-primary:before, hr.break-small.break-double.background-primary:after,
 .primary-color-primary hr.break-small.break-double.background-primary:before, .primary-color-primary hr.break-small.break-double.background-primary:after {
   background: #C81010;
@@ -474,7 +499,7 @@ aside.aside-left {
   color: #fff;
 }
 .text-white, .text-white *, .primary-color-white .text-primary, .primary-color-white .text-primary * {
-  color: #fff !important;
+  color: #2A1B3D !important;
 }
 .text-primary, .text-primary *, .primary-color-primary .text-primary, .primary-color-primary .text-primary * {
   color: #C81010 !important;
@@ -499,10 +524,7 @@ aside.aside-left {
   color: #002633 !important;
 }
 
-/* Background Colors */
-.background-white, .primary-color-white .background-primary {
-  background-color: #fff !important;
-}
+
 .background-primary, .primary-color-primary .background-primary {
   background-color: #C81010 !important;
 }
@@ -645,6 +667,7 @@ aside.aside-left {
   border: 1px solid #002633;
   box-shadow: none;
   color: #002633;
+  opacity: 0.5;
 }
 .button.button-dark-stroke:hover, a.button.button-dark-stroke:hover,
 .primary-color-dark .button.button-primary-stroke:hover, .primary-color-dark a.button.button-primary-stroke:hover {
@@ -2319,6 +2342,56 @@ video {
   border-color: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
   border-color: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
   border-color: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-
 }
+
+
+.logo-white {
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.logo-white:hover, .logo-dark:hover {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.logo img.logo-dark {
+  margin: 0;
+  max-width: 85px;
+  position: relative;
+  top: -4px;
+  width: 100%;
+}
+
+
+.hide-image {
+   display: none;
+ }
 
