@@ -671,7 +671,11 @@ aside.aside-left {
 }
 .button.button-dark-stroke:hover, a.button.button-dark-stroke:hover,
 .primary-color-dark .button.button-primary-stroke:hover, .primary-color-dark a.button.button-primary-stroke:hover {
-  background: #002633 none repeat scroll 0 0;
+  background: rgb(255,130,130);
+  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  opacity: 1;
   color: #fff;
 }
 
