@@ -695,9 +695,6 @@ aside.aside-left {
 .float-left {
   float: left;
 }
-.block-bordered {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
 .padding {
   padding: 1.25rem!important;
 }
@@ -2395,7 +2392,30 @@ video {
 }
 
 
-.hide-image {
-   display: none;
- }
+.block-bordered {
+  border: solid 2px #cbd4d9;
+  border-radius: 5px;
+  
+}
+.block-bordered:hover {
+  background:
+  /* Background colors don’t work with `background-origin`, so use a gradient. */
+  linear-gradient(
+      to bottom,
+      rgba(255,130,130,1) 0%,
+      rgba(225,120,237,1) 100%
+    )
+    padding-box, /* ends at inner border edges */
+  conic-gradient(
+      from var(--bg-angle) in oklch longer hue,
+      rgba(225,120,237,1) 100% 0 0
+    )
+    border-box; /* extends to outer border edges */
+
+/* a clear border lets the background gradient shine through */
+border: 6px solid transparent;
+
+  transform: scale(1.1);
+  color: white;
+}
 
