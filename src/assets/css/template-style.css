@@ -363,9 +363,9 @@ nav {
   position: relative;
   z-index: 2;
 }
-.top-nav ul ul {
+/*.top-nav ul ul {
   background: #002633 none repeat scroll 0 0;
-}
+}*/
 .top-nav li ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   margin: 0;
@@ -677,6 +677,7 @@ aside.aside-left {
   background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
   opacity: 1;
   color: #fff;
+  border-color: rgb(28, 10, 40);
 }
 
 /* Containers */
@@ -2004,19 +2005,19 @@ nav.fixed .logo-dark, .fixed nav .logo-dark {
 -webkit-transition: all 0.20s linear 0s;
 }
 
-.top-nav ul ul {
+/*.top-nav ul ul {
   background: #fff none repeat scroll 0 0;
-}
+}*/
 .top-nav li ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .top-nav li ul li:last-child {
   border-bottom: 0;
 }
-.top-nav li ul li a, .background-white .top-nav li ul li a, .top-nav .active-item li a {
+/*.top-nav li ul li a, .background-white .top-nav li ul li a, .top-nav .active-item li a {
   background: #fff none repeat scroll 0 0;
   color: rgba(0,0,0, 0.75);
-}
+}*/
 
 
 
@@ -2217,6 +2218,7 @@ video {
   stroke-dashoffset: 437;
 }
 
+/* Styles généraux pour le menu */
 .menu-container {
   display: flex;
   flex: 1;
@@ -2241,7 +2243,6 @@ video {
 .menu-item {
   position: relative;
   margin: 0 15px;
-
 }
 
 .menu-item a {
@@ -2253,41 +2254,34 @@ video {
 
 .menu-item a:hover {
   background: rgb(255,130,130);
-  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+  background: -moz-linear-gradient(left, rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: linear-gradient(to right, rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.2);
 }
 
+/* Dropdown and submenu styles */
 .dropdown-content, .submenu {
   display: none;
   position: absolute;
-  background: white;
   min-width: 150px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  background-color: #1c3849;
 }
 
 .dropdown-content a, .submenu a {
   padding: 10px;
-  color: #333;
+  color: #e01717;
   display: block;
 }
 
-.dropdown-content a:hover, .submenu a:hover {
-  background: #000000;
-  background: rgb(255,130,130);
-  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.dropdown-content a.no-hover:hover, .submenu a:hover {
+
 }
 
-.menu-item:hover .dropdown-content, .dropdown-content li:hover .submenu {
+.menu-item:hover .dropdown-content, .menu-item:hover .submenu {
   display: block;
   top: 100%;
   left: 0;
@@ -2340,9 +2334,9 @@ video {
   width: 10px;
   height: 10px;
   border-color: rgb(255,130,130);
-  border-color: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
-  border-color: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  border-color: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  border-color: -moz-linear-gradient(left, rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  border-color: -webkit-linear-gradient(left, rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  border-color: linear-gradient(to right, rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
 }
 
 
@@ -2395,27 +2389,14 @@ video {
 .block-bordered {
   border: solid 2px #cbd4d9;
   border-radius: 5px;
-  
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
 }
 .block-bordered:hover {
-  background:
-  /* Background colors don’t work with `background-origin`, so use a gradient. */
-  linear-gradient(
-      to bottom,
-      rgba(255,130,130,1) 0%,
-      rgba(225,120,237,1) 100%
-    )
-    padding-box, /* ends at inner border edges */
-  conic-gradient(
-      from var(--bg-angle) in oklch longer hue,
-      rgba(225,120,237,1) 100% 0 0
-    )
-    border-box; /* extends to outer border edges */
-
-/* a clear border lets the background gradient shine through */
-border: 6px solid transparent;
-
-  transform: scale(1.1);
-  color: white;
+  transform: scale(1.05);
 }
+
+
 
