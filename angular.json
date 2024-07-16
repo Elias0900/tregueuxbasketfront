@@ -21,15 +21,29 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/js",
+              "src/assets/img",
+
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/icons.css",
+              "src/assets/css/responsee.css",
+              "src/assets/css/template-style.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/jquery-1.8.3.min.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/modernizr.js"
+            ],
+
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -97,5 +111,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
