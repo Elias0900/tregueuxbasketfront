@@ -35,7 +35,11 @@
             "styles": [
               "src/assets/css/icons.css",
               "src/assets/css/responsee.css",
-              "src/assets/css/template-style.css"
+              "src/assets/css/template-style.css",
+              "src/assets/css/perso.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+
+
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
