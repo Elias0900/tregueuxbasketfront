@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CarouselComponent } from '../carousel/carousel.component';
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-equipe',
   standalone: true,
-  imports: [RouterModule, CarouselComponent],
+  imports: [CarouselComponent, CommonModule],
   templateUrl: './equipe.component.html',
   styleUrl: './equipe.component.css'
 })

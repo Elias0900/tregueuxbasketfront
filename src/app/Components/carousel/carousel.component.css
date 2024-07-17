@@ -5,13 +5,12 @@
     width: 700px;
     border-radius: 15px;
     box-shadow: 0 6px 12px #dce1e1;
-    
+
 }
 
 .carousel-container img {
     display: none;
     border-radius: 15px;
-
 }
 
 .carousel-container img.image-active{
@@ -21,7 +20,7 @@
 }
 
 
-/* dot indicators */ 
+/* dot indicators */
 
 .carousel-dot-indicators {
     position: absolute;
@@ -65,10 +64,10 @@
 @keyframes fade {
     from {
         opacity: 0.4;
-    
+
     } to {
         opacity: 1;
-    }   
+    }
 }
 
 
@@ -108,7 +107,7 @@
 }
 
 .icon-carousel:active{
-    opacity: 0.5;   
+    opacity: 0.5;
 }
 
 
