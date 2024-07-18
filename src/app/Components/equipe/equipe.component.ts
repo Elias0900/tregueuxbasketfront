@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { CarouselComponent } from '../carousel/carousel.component';
 import {CommonModule} from "@angular/common";
+import { NavBarModule } from "../nav-bar/nav-bar.module";
+import { NavBarComponent } from "../nav-bar/nav-bar.component";
+
 
 @Component({
   selector: 'app-equipe',
   standalone: true,
-  imports: [CarouselComponent, CommonModule],
+  imports: [CarouselComponent, CommonModule, NavBarModule],
   templateUrl: './equipe.component.html',
-  styleUrl: './equipe.component.css'
+  styleUrls: ['./equipe.component.css']
 })
 export class EquipeComponent {
   title = 'carousel';

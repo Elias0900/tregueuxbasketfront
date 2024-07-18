@@ -1,20 +1,44 @@
 <div *ngIf="images && images.length" class="carousel-container">
+    
+    <div class="carousel-container">
+        <!-- Image de gauche (précédente) -->
+        <div class="cote">
+            <img *ngIf="images.length > 1"
+                 [src]="images[getPreviousIndex()].imageSrc"
+                 [alt]="images[getPreviousIndex()].imageAlt"
+                 class="prev-image effet"
+                 (click)="onPrevClick()">
+        </div>
+    
+        <!-- Image actuelle -->
+        <img *ngFor="let image of images; let i = index"
+             [alt]="image.imageAlt"
+             [ngClass]="{'image-active': selectedIndex === i}"
+             [src]="image.imageSrc"
+             class="fade active-image effet">
+    
+        <!-- Image de droite (suivante) -->
+        <div class="cote">
+            <img *ngIf="images.length > 1"
+                 [src]="images[getNextIndex()].imageSrc"
+                 [alt]="images[getNextIndex()].imageAlt"
+                 class="next-image effet"
+                 (click)="onNextClick()">
+        </div>
+    </div>
+    
 
-    <img *ngFor="let image of images; let i = index"
-         [alt]="image.imageAlt"
-         [ngClass]="{'image-active': selectedIndex === i}"
-         [src]="image.imageSrc"
-         class="fade">
 
+    <!-- Indicateurs -->
     <div *ngIf="indicators" class="carousel-dot-indicators">
         <span *ngFor="let dot of images; let i = index"
-            class="dot"
-            [ngClass]="{'active': selectedIndex === i}"
-            (click)="selectedImage(i)" >
-    </span>
+              class="dot"
+              [ngClass]="{'active': selectedIndex === i}"
+              (click)="selectedImage(i)">
+        </span>
     </div>
 
-
+    <!-- Contrôles -->
     <button *ngIf="controls" class="btn-carousel btn-prev" (click)="onPrevClick()">
         <i class="fas fa-arrow-circle-left icon-carousel icon-prev"></i>
     </button>
@@ -23,4 +47,3 @@
         <i class="fas fa-arrow-circle-right icon-carousel icon-next"></i>
     </button>
 </div>
-

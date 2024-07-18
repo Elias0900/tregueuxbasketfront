@@ -146,7 +146,7 @@ a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
 }
 /* Buttons */
 .button,a.button,a.button:link,a.button:active,a.button:visited {
-  background: #777 none repeat scroll 0 0;
+  background: #c01818 none repeat scroll 0 0;
   border: 0;
   color: #fff;
   cursor: pointer;
@@ -171,7 +171,7 @@ a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
   color: #fff;
 }
 .button.secondary-btn,a.button.secondary-btn,a.button.secondary-btn:link,a.button.secondary-btn:active,a.button.secondary-btn:visited {
-  background: #444 none repeat scroll 0 0;
+  background: #d32020 none repeat scroll 0 0;
 }
 .button.cancel-btn,a.button.cancel-btn,a.button.cancel-btn:link,a.button.cancel-btn:active,a.button.cancel-btn:visited {
   background: #dc003a none repeat scroll 0 0;
@@ -620,7 +620,7 @@ a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
 }
 /* Buttons */
 .button,a.button,a.button:link,a.button:active,a.button:visited {
-  background: #777 none repeat scroll 0 0;
+  background: #c01b1b none repeat scroll 0 0;
   border: 0;
   color: #fff;
   cursor: pointer;
@@ -642,7 +642,7 @@ a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
 }
 .button:hover {box-shadow: 0 0 10px 100px rgba(255,255,255,0.15) inset;}
 .button.secondary-btn,a.button.secondary-btn,a.button.secondary-btn:link,a.button.secondary-btn:active,a.button.secondary-btn:visited {
-  background: #444 none repeat scroll 0 0;
+  background: #d11b1b none repeat scroll 0 0;
 }
 .button.cancel-btn,a.button.cancel-btn,a.button.cancel-btn:link,a.button.cancel-btn:active,a.button.cancel-btn:visited {
   background: #dc003a none repeat scroll 0 0;

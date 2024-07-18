@@ -225,7 +225,7 @@ ul.chevron .submenu > a:after, ul.chevron .sub-submenu > a:after,ul.chevron .asi
   font-size:0.7rem;
   margin:0 0.625rem;
 }
-.top-nav .active-item a {background:#2b4c61;}
+.top-nav .active-item a {background:none;}
 .aside-nav > ul > li.active-item > a:link,.aside-nav > ul > li.active-item > a:visited {
   background:#2d612b;
   color:#fff;

@@ -1,0 +1,16 @@
+.carousel-equipes {
+    display: block;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    background-color: #2b4c61;
+}
+
+.body {
+    background-color: #2b4c61; /* Couleur sombre */
+   
+    min-height: 100vh; /* Assure que le fond couvre toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+

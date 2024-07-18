@@ -1,53 +1,47 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
-
-interface CarouselImage {
-  imageSrc: string;
-  imageAlt: string;
-}
+import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [CommonModule],  // Correction ici
-  templateUrl: 'carousel.component.html',
-  styleUrls: ['carousel.component.css']
+  templateUrl: './carousel.component.html',
+  imports: [CommonModule],
+  styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent implements OnInit {
-
-  @Input() images: CarouselImage[] = [];
-  @Input() indicators = true;
-  @Input() controls = true;
-  @Input() autoSlide = false;
-  @Input() slideInterval = 3000;
-
-  selectedIndex = 0;
-
-  ngOnInit(): void {
-    if (this.autoSlide) {
-      this.autoSlideImage();
-    }
-  }
+export class CarouselComponent {
+  @Input() images: { imageSrc: string, imageAlt: string }[] = [];
+  @Input() indicators: boolean = true;
+  @Input() controls: boolean = true;
+  selectedIndex: number = 0;
 
   selectedImage(index: number): void {
     this.selectedIndex = index;
   }
 
   onPrevClick(): void {
-    this.selectedIndex = (this.selectedIndex === 0)
-      ? this.images.length - 1
-      : this.selectedIndex - 1;
-  }
-
-  autoSlideImage(): void {
-    setInterval(() => {
-      this.onNextClick();
-    }, this.slideInterval);
+    if (this.selectedIndex > 0) {
+      this.selectedIndex--;
+    } else {
+      this.selectedIndex = this.images.length - 1;
+    }
   }
 
   onNextClick(): void {
-    this.selectedIndex = (this.selectedIndex === this.images.length - 1)
-      ? 0
-      : this.selectedIndex + 1;
+    if (this.selectedIndex < this.images.length - 1) {
+      this.selectedIndex++;
+    } else {
+      this.selectedIndex = 0;
+    }
   }
+
+  getPreviousIndex(): number {
+    return (this.selectedIndex - 1 + this.images.length) % this.images.length;
+  }
+
+  getNextIndex(): number {
+    return (this.selectedIndex + 1 + this.images.length) % this.images.length;
+  }
+
+
+
 }

@@ -1,53 +1,7 @@
-
-
-
 <!-- PREMIUM FEATURES BUTTON -->
 <a target="_blank" class="hide-s" href="../template/eleganter-premium-responsive-business-template/" style="position:fixed;top:120px;right:-14px;z-index:10;"><img src="../assets/img/premium-features.png" alt=""></a>
 <!-- HEADER -->
-<header role="banner" class="position-absolute">
-  <!-- Top Navigation -->
-  <nav class="background-transparent background-transparent-hightlight full-width sticky">
-    <div class="menu-container">
-      <div class="s-12 l-2">
-        <a href="/home" class="logo">
-          <!-- Logo White Version -->
-          <img class="logo-white" src="../assets/img/logo-TLBA22-version-definitive-500.png" alt="">
-          <!-- Logo Dark Version -->
-          <img class="logo-dark" src="../assets/img/logo-TLBA22-version-definitive-500.png" alt="">
-        </a>
-      </div>
-      <div class="top-nav s-12 l-10">
-      <ul class="menu right chevron">
-        <li class="menu-item">
-          <a routerLink="['home']">Accueil</a>
-        </li>
-        <li class="menu-item">
-          <a href="index.html">Le Club</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Equipe NF2</a>
-        </li>
-        <li class="menu-item">
-          <a [routerLink]="['/equipe']">Equipes</a>
-          <ul class="dropdown-content">
-            <li  class="no-hover"><a href="#">U15</a></li>
-            <li class="no-hover"><a  href="#">U15</a></li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="about.html">Ecole de Basket</a>
-        </li>
-        <li class="menu-item">
-          <a href="gallery.html">Galerie</a>
-        </li>
-        <li class="menu-item">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<app-nav-bar></app-nav-bar>
 
 <!-- MAIN -->
 <main role="main">
@@ -56,7 +10,7 @@
     <div class="carousel-default owl-carousel carousel-main carousel-nav-white background-dark text-center">
       <div class="item">
         <div class="s-12">
-          <img src="../assets/img/tlba.png" class="hide-image" alt="">
+          <img src="../assets/img/tlba.png" alt="">
           <div class="carousel-content">
             <div class="content-center-vertical line">
             </div>
@@ -71,7 +25,7 @@
     <div class="line">
        <div class="btn-inscription">
               <h1 class="text-white text-size-60 text-m-size-30 text-line-height-1 titre">
-                TREGUEUX LANGUEUX BASKET ARMOR
+                {{title}}
               </h1>
          <br>
               <div class="line">
